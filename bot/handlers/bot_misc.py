@@ -22,7 +22,7 @@ from pyrogram.handlers import (
 def deny_access(msg):
     msg.answer(
         results=[],
-        switch_pm_text='This bot is for owner only.',
+        switch_pm_text='This is only controlled by the bot owner.',
         switch_pm_parameter='createown',
         cache_time=0,
         is_personal=1,
@@ -48,22 +48,17 @@ def send_pm_engine(msg):
             [
                 InlineKeyboardButton(text='Contact me',
                                      callback_data='contact_me'),
-
-                InlineKeyboardButton(text='About',
-                                     callback_data='about_me'),
             ],
             [
-                InlineKeyboardButton(text='Misc',
-                                     callback_data='misc_me'),
-                InlineKeyboardButton(text='Some link',
-                                     url='https://google.com')
+                InlineKeyboardButton(text='Support',
+                                     url='https://t.me/CryptoBD_Lovers')
             ]
         ]
     )
     answer = InlineQueryResultPhoto(
         title='PM Security',
         photo_url=pm_photo,
-        caption='Hold it right there. I do not know you.',
+        caption='DM-protection oF SELim HosEn',
         reply_markup=keyboard
     )
     msg.answer([answer], cache_time=0, is_personal=0)
